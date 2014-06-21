@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title= title
+    != css('application')
+    != css('main')
+    != css('fullcalendar')
+
+  body
+
+    .container
+      #calendar
+
+
+    script(src='/managed/jquery/dist/jquery.min.js')
+    script(src='/managed/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/managed/angular/angular.min.js')
+    script(src='/js/coffee-script.js')
+    script(type='text/coffeescript' src='js/schedule.coffee')
+    script(type='text/javascript' src='js/fullcalendar.min.js')

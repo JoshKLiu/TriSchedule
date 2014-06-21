@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    title= title
+    != css('application')
+    != css('main')
+
+  body
+
+    .content.container
+      
+
+      form(role='form' action='/classInfo' method='POST')
+        #search.form-group 
+          #searchText 
+            h1 Class Search
+          p
+          input.searchBox.form-control(type='search' placeholder='COGS 121' name='class') 
+          p
+          input.searchButton.btn.btn-primary(type='submit' value='Search') 
+
+      #classInfo
+        #className 
+          h2 #{res.dpt_department_code} #{res.crs_course_id}
+        #professorName 
+          h3 #{res.lec_instructor_name}
+        p Day: #{res.lec_days}, Time: #{res.lec_time}
+        p Location: #{res.lec_location}
+
+        #extraInfo Final Date: #{res.final_exam_date} at #{res.final_exam_time}
+
+      #rowContainer
+        .row
+          .col-sm-6.col-md-4
+            .thumbnail
+              .caption
+                h3 A.S. Grade Distribution
+                p 41% of People Got A's!
+                p
+                  a.btn.btn-primary(href='#{res.asgrade_url}') Take Me Away Bby Pls
+          .col-sm-6.col-md-4
+            .thumbnail
+              .caption
+                h3 RateMyProfessor Score
+                p 3.8 Recommendation
+                p
+                  a.btn.btn-primary(href='#{res.ratemyprofessor_url}') Take Me Away Bby Pls
+          .col-sm-6.col-md-4
+            .thumbnail
+              .caption
+                h3 CAPE Review
+                p 88% Recommend Class 
+                p 71% Recommend Professor
+                p  
+                  a.btn.btn-primary(href='#{res.cape_url}') Take Me Away Bby Pls
+
+        form(role='form' action='/addClass' method='post')
+          input.addClassBtn.btn.btn-primary(type='submit' value="Add to Schedule") 
+
+    script(src='/managed/jquery/dist/jquery.min.js')
+    script(src='/managed/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/managed/angular/angular.min.js')

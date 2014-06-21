@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    != css('application')
+    != css('main')
+
+  body
+
+    .content
+      
+
+      form(role='form' action='/classInfo' method='post')
+        #search.form-group 
+          #searchText Class Search
+          p
+          input.searchBox.form-control(type='search' name='class' placeholder='COGS 121') 
+          p
+          input.searchButton.btn.btn-primary(type='submit' value='Search') 
+
+
+    script(src='/managed/jquery/dist/jquery.min.js')
+    script(src='/managed/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/managed/angular/angular.min.js')

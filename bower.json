@@ -1,0 +1,8 @@
+{
+  "name": "cogs121",
+  "version": "1.0.0",
+  "dependencies": {
+    "angular": "latest",
+    "bootstrap": "latest"
+  }
+}

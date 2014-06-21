@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    != css('application')
+    != css('main')
+    link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Lato:900')
+
+  body
+    #registration.container
+      h3 You look new here.
+      p Please register with your student PID.
+
+      form(role='form' method='post' action='/signUp')
+        .form-group
+          input(type='text' class='form-control' name='pid' placeholder='Student PID') 
+          p
+          input(type='password' class='form-control' placeholder='Password')
+          p
+          input.btn.btn-primary.btn-default(type='submit' value='Register')
+
+    script(src='/managed/jquery/dist/jquery.min.js')
+    script(src='/managed/bootstrap/dist/js/bootstrap.min.js')
+    script(src='/managed/angular/angular.min.js')

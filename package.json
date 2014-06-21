@@ -1,0 +1,36 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "latest",
+    "npm":  "latest"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "latest",
+    "cookie-parser": "latest",
+    "express-session": "latest",
+    "body-parser": "latest",
+    "jade": "latest",
+    "less": "latest",
+    "stylus": "latest",
+    "nib": "latest",
+    "coffee-script": "latest",
+    "connect-assets": "3.0.1",
+    "join": "latest",
+    "wrench": "*",
+    "which": "*",
+    "clientjade": "latest",
+    "fbgraph": "latest",
+    "mysql":"latest",
+    "async":"latest"
+  },
+  "devDependencies": {
+    "wrench": "*",
+    "which": "*",
+    "supervisor": "*"
+  }
+}
